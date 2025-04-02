@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo de Productos</title>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <header>
@@ -16,70 +17,77 @@
             </ul>
         </nav>
     </header>
-    <h1>Contenido de la web</h1> 
+    <div class="container">
+        <aside>
+            <h2>Filtros</h2>
+            <input type="text" placeholder="Buscar productos">
+            <label><input type="checkbox">Ofertas</label>
+            <label><input type="checkbox">Envio gratis</label>
+        </aside>
+        
+        <main>
+            <section class="product-grid">
+                <article class="product-card">
+                    <img src="./img/image-google.png" alt="Nombre del producto">
+                    <h3>Nombre del producto</h3>
+                    <p>Descripción del producto</p>
+                    <p>Precio: $100</p>
+                    <button>Comprar</button>
+                </article>
+                <article class="product-card">
+                    <img src="./img/image-google.png" alt="Nombre del producto">
+                    <h3>Producto 3</h3>
+                    <p>Descripción del producto</p>
+                    <p>Precio: $100</p>
+                    <button>Comprar</button>
+                </article>
+                <article class="product-card">
+                    <img src="./img/image-google.png" alt="Nombre del producto">
+                    <h3>Nombre del producto</h3>
+                    <p>Descripción del producto</p>
+                    <p>Precio: $100</p>
+                    <button>Comprar</button>
+                </article>
+            </section>
+            <br>
+            <br>
+            <section>
+                <table>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Comprar</th>
+                        </tr>
+                        <tr>
+                            <td>Nombre del producto</td>
+                            <td>Descripción del producto</td>
+                            <td>$100</td>
+                            <td><button>Comprar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre del producto</td>
+                            <td>Descripción del producto</td>
+                            <td>$100</td>
+                            <td><button>Comprar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre del producto</td>
+                            <td>Descripción del producto</td>
+                            <td>$100</td>
+                            <td><button>Comprar</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td>$300</td>
+                            <td></td>
+                        </tr>
+                        <manuel>Hola</manuel>
+                </table>
+            </section>
+        </main>
+    </div>
     
-    <main>
-        <section>
-            <h2>Productos destacados</h2>
-            <article>
-                <img src="./img/image-google.png" alt="Nombre del producto">
-                <h3>Nombre del producto</h3>
-                <p>Descripción del producto</p>
-                <p>Precio: $100</p>
-                <button>Comprar</button>
-            </article>
-            <article>
-                <img src="./img/image-google.png" alt="Nombre del producto">
-                <h3>Nombre del producto</h3>
-                <p>Descripción del producto</p>
-                <p>Precio: $100</p>
-                <button>Comprar</button>
-            </article>
-            <article>
-                <img src="./img/image-google.png" alt="Nombre del producto">
-                <h3>Nombre del producto</h3>
-                <p>Descripción del producto</p>
-                <p>Precio: $100</p>
-                <button>Comprar</button>
-            </article>
-        </section>
-        <br>
-        <br>
-        <section>
-            <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Comprar</th>
-                    </tr>
-                    <tr>
-                        <td>Nombre del producto</td>
-                        <td>Descripción del producto</td>
-                        <td>$100</td>
-                        <td><button>Comprar</button></td>
-                    </tr>
-                    <tr>
-                        <td>Nombre del producto</td>
-                        <td>Descripción del producto</td>
-                        <td>$100</td>
-                        <td><button>Comprar</button></td>
-                    </tr>
-                    <tr>
-                        <td>Nombre del producto</td>
-                        <td>Descripción del producto</td>
-                        <td>$100</td>
-                        <td><button>Comprar</button></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Total</td>
-                        <td>$300</td>
-                        <td></td>
-                    </tr>
-                    <manuel>Hola</manuel>
-            </table>
-        </section>
-    </main>
     <footer>
         <p>Todos los derechos reservados &copy;</p>
         <a href="./contact.html">Contacto</a>
