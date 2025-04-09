@@ -9,25 +9,30 @@
 <body>
     <header>
         <h1>Titulo de la web</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+        
     </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <aside>
             <h2>Filtros</h2>
-            <input type="text" placeholder="Buscar productos">
-            <label><input type="checkbox">Ofertas</label>
-            <label><input type="checkbox">Envio gratis</label>
+            <div class="search-filter">
+                <input type="text" placeholder="Buscar productos">
+            </div>
+            <div>
+                <label><input type="checkbox">Ofertas</label>
+                <label><input type="checkbox">Envio gratis</label>
+            </div>
         </aside>
         
         <main>
             <section class="product-grid">
-                <article class="product-card">
+                <article id="card-1" class="product-card">
                     <img src="./img/image-google.png" alt="Nombre del producto">
                     <h3>Nombre del producto</h3>
                     <p>Descripción del producto</p>
@@ -48,42 +53,13 @@
                     <p>Precio: $100</p>
                     <button>Comprar</button>
                 </article>
-            </section>
-            <br>
-            <br>
-            <section>
-                <table>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Comprar</th>
-                        </tr>
-                        <tr>
-                            <td>Nombre del producto</td>
-                            <td>Descripción del producto</td>
-                            <td>$100</td>
-                            <td><button>Comprar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Nombre del producto</td>
-                            <td>Descripción del producto</td>
-                            <td>$100</td>
-                            <td><button>Comprar</button></td>
-                        </tr>
-                        <tr>
-                            <td>Nombre del producto</td>
-                            <td>Descripción del producto</td>
-                            <td>$100</td>
-                            <td><button>Comprar</button></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Total</td>
-                            <td>$300</td>
-                            <td></td>
-                        </tr>
-                        <manuel>Hola</manuel>
-                </table>
+                <article class="product-card">
+                    <img src="./img/image-google.png" alt="Nombre del producto">
+                    <h3>Nombre del producto</h3>
+                    <p>Descripción del producto</p>
+                    <p>Precio: $200</p>
+                    <button>Comprar</button>
+                </article>
             </section>
         </main>
     </div>
