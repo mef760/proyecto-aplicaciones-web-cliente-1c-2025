@@ -1,35 +1,13 @@
+const products = [];
 
-const products = [
-    {
-        name: "Camiseta",
-        description: "Camiseta de algodón 100%",
-        image: "./img/image-google.png",
-        price: 15,
-        deliveryFree: true
-    },  
-    {
-        name: "Pantalones",
-        description: "Pantalones de mezclilla",
-        image: "./img/image-google.png",
-        price: 25,
-        deliveryFree: true
-    },
-    {
-        name: "Zapatos",
-        description: "Zapatos de cuero",
-        image: "./img/image-google.png",
-        price: 50,
-        deliveryFree: false
-    },
-    {
-        name: "Sombrero",
-        description: "Sombrero de paja",
-        image: "./img/image-google.png",
-        price: 10,
-        deliveryFree: false
+const getProducts = async () => {
+    const response = await fetch('https://dummyjson.com/products');
+    const data = await response.json();
+    console.log('data', data.products);
+    renderProducts(data.products);
+}
 
-    }
-];
+getProducts();
 
 const grid = document.querySelector('.product-grid');
 const searchInput = document.querySelector('#input-search-products');
@@ -41,11 +19,11 @@ function createProductCard(product) {
     card.classList.add('product-card');
 
     const img = document.createElement('img');
-    img.src = product.image;
-    img.alt = product.name;
+    img.src = product.thumbnail;
+    img.alt = product.title;
 
     const title = document.createElement('h3');
-    title.textContent = product.name;
+    title.textContent = product.title;
 
     const description = document.createElement('p');
     description.textContent = product.description;
