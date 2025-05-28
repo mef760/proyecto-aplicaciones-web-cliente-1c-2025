@@ -4,6 +4,7 @@ const TABLE_NAME = 'Products';
 const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
 
 const products = [];
+const cartProducts = JSON.parse(localStorage.getItem('cart')) || [];
 
 const addToAirtable = async (product)=>{
     
@@ -34,13 +35,14 @@ const getProducts = async () => {
 
     const productsMaped = data.records.map(item => {
         return {
-        title: item.fields.title,
-        description: item.fields.description,
-        thumbnail: item.fields.thumbnail,
-        price: item.fields.price
+            title: item.fields.title,
+            description: item.fields.description,
+            thumbnail: item.fields.thumbnail,
+            price: item.fields.price
         };
     })
     console.log(productsMaped);
+
     renderProducts(productsMaped);
 }
 
@@ -69,7 +71,15 @@ function createProductCard(product) {
     price.textContent = `$${product.price}`;
 
     const button = document.createElement('button');
-    button.textContent = 'Comprar';
+    button.textContent = 'Agregar al carrito';
+    button.addEventListener('click', () => {
+        const exists = cartProducts.find(p => p.title === product.title);
+        if (!exists){
+            cartProducts.push(product);
+            localStorage.setItem('cart', JSON.stringify(cartProducts));
+            console.log('Producto agregado al carrito');
+        }
+    });
 
     card.appendChild(img);
     card.appendChild(title);
