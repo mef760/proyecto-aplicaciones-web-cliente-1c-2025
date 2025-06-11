@@ -1,0 +1,12 @@
+- pagina responsive 100% (web, mobile, tableta)
+- full navegacion entre todas paginas
+- estructura de catalogo minima:
+    - listado de productos
+    - detalle de productos
+    - carrito compras
+    - layout (header, menu, footer, main)
+    - contacto
+    - crud (admin)
+
+- html y css
+- javascript (eventos, localstorage, json, fetch, manejo DOM)
