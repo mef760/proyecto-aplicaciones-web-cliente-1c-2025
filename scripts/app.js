@@ -1,8 +1,9 @@
 // app.js
+import './secrets.js'; // Importar secretos, si es necesario
 
 // 1. Configuración Global / Constantes
 const API_CONFIG = {
-    TOKEN: 'pathdvs7fO8A5c7ub.2d90db5930290ea0d20c24839ada2d49978c76a9416c214176354d34c1e80783',
+    TOKEN: SECRETS.AIRTABLE_SECRET,
     BASE_ID: 'appHDoJ0skWqgb4jE',
     TABLE_NAME: 'Products',
     URL: `https://api.airtable.com/v0/appHDoJ0skWqgb4jE/Products`
